@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: crypto
+  cloud:
+    config:
+      uri: ${vcap.services.config-service.credentials.uri:http://localhost:8888}
+
+encrypt:
+  keyStore:
+    location: file:/Users/pivotal/workspace/spring-pm/server.jks
+    password: letmein
+    alias: mytestkey
+    secret: changeme
